@@ -24,7 +24,7 @@ By using PyABSA, Flask, and Javascript, we have successfully finished this proje
 Make sure you have a domain, and you have registered Google reCAPTCHA for your domain. So you can obtain your reCAPTCHA sitekey and secret.
 
 # 2. Installation
-## Linux users:
+## Linux Users:
 **1.** `cd` into a nice place to put your project. (DO NOT PUT IT IN ROOT DIRECTORY)
 
 **2.** Put the following command to download & install the project
