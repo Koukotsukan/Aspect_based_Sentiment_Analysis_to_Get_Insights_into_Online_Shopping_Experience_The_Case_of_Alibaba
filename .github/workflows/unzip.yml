@@ -1,0 +1,17 @@
+name: Unzip Large File
+
+on: [push]
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install Unzip
+      run: sudo apt-get install unzip
+
+    - name: Unzip Files
+      run: unzip 'bert_base_atepc_custom_dataset_cdw_apcacc_84.12_apcf1_67.38_atef1_73.15.zip.*' -d unzipped_files
