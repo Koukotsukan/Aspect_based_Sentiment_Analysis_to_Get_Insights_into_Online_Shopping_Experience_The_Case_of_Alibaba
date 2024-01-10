@@ -1,19 +1,24 @@
-# Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba
+# Aspect based Sentiment Analysis to Get Insights into Online Shopping Experience: The_Case of Alibaba
 The study employed the Fast-LCF-ATEPC model for Alibaba reviews, achieving 91.06% APC accuracy and 83.09% ATE F1 score. It revealed mixed user experiences in areas like usability, pricing, and shipping, aiming to enhance Alibaba's e-commerce user satisfaction.
 
 By using PyABSA, Flask, and Javascript, we have successfully finished this project, and it is now online https://aliexperience.online.
 
-<img alt="Ali-Experience Homepage" style="width:550px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/Alibaba%20Experience%20Reviews%20Homepage.png"/>
-Home Page
+*Home Page*
 
-<img alt="Mobile Compability" style="width:550px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/Mobile%20Compability.jpg"/>
-Mobile Compatibility
+<img alt="Ali-Experience Homepage" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/Alibaba%20Experience%20Reviews%20Homepage.png"/>
 
-<img alt="Batch Prediction" style="width:550px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/batch%20result.png"/>
-Batch Prediction
+*Mobile Compatibility*
 
-<img alt="Error Handling" style="width:350px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/error%20collection.jpg"/>
-Error Handling
+<img alt="Mobile Compability" style="width:350px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/Mobile%20Compability.jpg"/>
+
+*Batch Prediction*
+
+<img alt="Batch Prediction" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/batch%20result.png"/>
+
+*Error Handling*
+
+<img alt="Error Handling" style="width:250px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/error%20collection.jpg"/>
+
 
 # 1. Before Installation
 Make sure you have a domain, and you have registered Google reCAPTCHA for your domain. So you can obtain your reCAPTCHA sitekey and secret.
