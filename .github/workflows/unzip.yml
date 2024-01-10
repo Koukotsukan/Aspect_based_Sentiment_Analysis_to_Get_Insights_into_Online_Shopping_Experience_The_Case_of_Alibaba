@@ -1,4 +1,4 @@
-name: Manually Unzip Multi-part Zip Files
+name: Manually Unzip Multi-part Zip Files with 7zip
 
 on: 
   workflow_dispatch:
@@ -11,14 +11,13 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Install Unzip
-      run: sudo apt-get install unzip
+    - name: Install 7zip
+      run: sudo apt-get install p7zip-full
 
     - name: Unzip Multi-part Zip Files
       run: |
         set -e
         cd checkpoints
         for file in *.zip.001; do
-          zipname=$(echo $file | sed 's/.001$//')
-          unzip -FF "$zipname".001
+          7z x "$file" -y
         done
