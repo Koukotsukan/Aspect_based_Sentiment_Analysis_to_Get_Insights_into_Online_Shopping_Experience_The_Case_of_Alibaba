@@ -21,3 +21,25 @@ jobs:
         for file in *.zip.001; do
           7z x "$file" -y
         done
+    - name: Install Git LFS
+      run: |
+        sudo apt-get install git-lfs
+        git lfs track "checkpoints/*"
+        git add .gitattributes checkpoints/
+        git commit -m "Track large files in checkpoints/ with LFS and add .gitattributes"
+        git push origin main
+    
+    - name: Configure Git
+      run: |
+        git config --global user.name 'Koukotsukan'
+        git config --global user.email 'nzh@niuzhaohang.top'
+    
+    - name: Track Large Files with LFS
+      run: |
+        git lfs track "checkpoints/*"
+    
+    - name: Commit and Push Large Files with LFS
+      run: |
+        git add -f checkpoints/
+        git commit -m "Add unzipped large files"
+        git push origin main
