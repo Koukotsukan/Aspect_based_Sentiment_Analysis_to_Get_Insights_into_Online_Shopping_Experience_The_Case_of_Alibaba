@@ -102,7 +102,7 @@ console.log("adjustLayout called");
         if (form) {
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
-                grecaptcha.execute('6Lc2hDopAAAAAKEpL1M42Y1AdyY6tjQr4ZvHFT7E', { action: 'submit' }).then(function(token) {
+                grecaptcha.execute('[Your Own Sitekey 4 Google reCHATPCHA]', { action: 'submit' }).then(function(token) {
                     const recaptchaResponseInput = document.createElement('input');
                     recaptchaResponseInput.setAttribute('type', 'hidden');
                     recaptchaResponseInput.setAttribute('name', 'recaptchaResponse');
