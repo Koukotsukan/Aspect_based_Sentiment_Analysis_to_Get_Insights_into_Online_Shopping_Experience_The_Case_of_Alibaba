@@ -95,19 +95,19 @@ Thank you for choosing to use this open-source project! We have adopted the MIT 
 By adhering to these principles, you have the opportunity to collaborate with other developers and contribute to the growth of the open-source community. We appreciate your support and respect for the MIT License and hope you enjoy using this project!
 
 **Open-source Software Used (with their respective licenses):**
-* Flask (BSD License): A lightweight WSGI web application framework.
-* Celery (BSD License): An asynchronous task queue/job queue based on distributed message passing.
-* PyABSA (MIT License) by Yang Heng: An efficient and user-friendly implementation for aspect-based sentiment analysis.
-* Flask-CORS (MIT License): A Flask extension for handling Cross-Origin Resource Sharing (CORS). I used it during debugging mode, did not use it in the production.
-* Transformer Models (Apache License 2.0): The core library for Transformer-based models like BERT and DeBERTa.
-* BERT (Apache License 2.0): Bidirectional Encoder Representations from Transformers for natural language processing tasks.
-* DeBERTa (MIT License): Decoding-enhanced BERT with disentangled attention.
-* Metric Visualizer (MIT License) by yangheng95: A tool for visualizing metrics.
+* **Flask (BSD License)**: A lightweight WSGI web application framework.
+* **Celery (BSD License)**: An asynchronous task queue/job queue based on distributed message passing.
+* **PyABSA (MIT License) by Yang Heng**: An efficient and user-friendly implementation for aspect-based sentiment analysis.
+* **Flask-CORS (MIT License)**: A Flask extension for handling Cross-Origin Resource Sharing (CORS). I used it during debugging mode, did not use it in the production.
+* **Transformer Models (Apache License 2.0)**: The core library for Transformer-based models like BERT and DeBERTa.
+* **BERT (Apache License 2.0)**: Bidirectional Encoder Representations from Transformers for natural language processing tasks.
+* **DeBERTa (MIT License)**: Decoding-enhanced BERT with disentangled attention.
+* **Metric Visualizer (MIT License) by Yang Heng**: A tool for visualizing metrics.
 
 **Commercial Software Used (under license):**
-* Google reCAPTCHA V3: A CAPTCHA system that helps to distinguish human users from automated users.
-* FontAwesome: An icon set and toolkit for web applications.
-* Google Sheets: A web-based spreadsheet program.
+* **Google reCAPTCHA V3**: A CAPTCHA system that helps to distinguish human users from automated users.
+* **FontAwesome**: An icon set and toolkit for web applications.
+* **Google Sheets**: A web-based spreadsheet program.
 
 <hr>
 
