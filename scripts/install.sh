@@ -58,7 +58,7 @@ source venv/bin/activate
 
 # 安装 requirements.txt 的包
 echo "Installing packages from requirements.txt..."
-pip install -r requirements.txt || { echo "Failed to install packages. You can manually install by 'pip install -r requuirements.txt"; exit 1; }
+pip install -r requirements.txt || { echo -e "\e[31mFailed to install Python packages.\e[0m"; echo -e "\e[31mPlease run 'pip install --upgrade pip' in the project root directory to upgrade pip.\e[0m"; exit 1; }
 
 echo "if you want help, can type ./install.sh --help to find more information."
 echo "Installation completed."
