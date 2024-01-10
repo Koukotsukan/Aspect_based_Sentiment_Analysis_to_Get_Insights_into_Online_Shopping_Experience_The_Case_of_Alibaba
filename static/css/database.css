@@ -1,0 +1,4 @@
+.responsive-iframe { width: 100%; max-width: 1200px; height: 550px; } 
+@media screen and (max-width: 768px) { 
+		.responsive-iframe { height: 600px; width: 300px; } 
+	}

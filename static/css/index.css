@@ -1,0 +1,131 @@
+.reviews {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+.review-item {
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	margin-bottom:10px;
+	flex-basis:45%;
+}
+.review-percentage {
+	margin-left:auto;
+	font-weight:bold;
+}
+textarea {
+	resize:none;
+	width:100%;
+	height:80px;
+}
+@media (max-width:768px) {
+	textarea {
+		height:60px;
+	}
+	.input-container input[type="text"] {
+		width:100%;
+	}
+	.input-container {
+		text-align:center;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+		text-align:center;
+		width:100%;
+	}
+}
+.rating {
+	display:flex;
+	align-items:center;
+}
+.form {
+	margin-top:20px;
+}
+.input {
+	width:80%;
+	height:40px;
+	border-radius:10px;
+	border:none;
+	padding-left:10px;
+}
+.submit {
+	width:15%;
+	height:40px;
+	border-radius:10px;
+	border:none;
+	background-color:#FF8C00;
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+}
+.input-container input[type="text"] {
+	flex-grow:1;
+	margin-right:10px;
+	width:100%;
+	padding:12px 20px;
+	margin:8px 0;
+	margin-bottom:20px;
+	box-sizing:border-box;
+	border-radius:15px;
+}
+.input-container input[type="submit"] {
+	background-color:red;
+	color:white;
+	padding:10px 20px;
+	margin:8px 0;
+	border:none;
+	margin-bottom:20px;
+	cursor:pointer;
+}
+.input-container input[type="button"] {
+	background-color:red;
+	color:white;
+	padding:10px 20px;
+	margin:8px 0;
+	border:none;
+	margin-bottom:20px;
+	cursor:pointer;
+}
+.input-container input[type="submit"]:hover {
+	opacity:0.8;
+}
+.input-container input[type="button"]:hover {
+	opacity:0.8;
+}
+.button:hover {
+	opacity:0.8;
+}
+.overlay {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	z-index:10;
+}
+.loader {
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background-color:white;
+	padding:20px;
+	border-radius:10px;
+}
+.popup {
+	display:none;
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background:white;
+	border-radius:10px;
+	padding:20px;
+	box-shadow:0 0 10px rgba(0,0,0,0.5);
+	z-index:3;
+}
