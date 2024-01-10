@@ -20,5 +20,5 @@ jobs:
         cd checkpoints
         for file in *.zip.001; do
           zipname=$(echo $file | sed 's/.001$//')
-          unzip -FF "$zipname".zip.001
+          unzip -FF "$zipname".001
         done
