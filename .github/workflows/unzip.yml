@@ -1,17 +1,24 @@
-name: Unzip Large File
+name: Manually Unzip Multi-part Zip Files
 
-on: [push]
+on: 
+  workflow_dispatch:
 
 jobs:
   unzip:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v2
 
     - name: Install Unzip
       run: sudo apt-get install unzip
 
-    - name: Unzip Files
-      run: unzip 'bert_base_atepc_custom_dataset_cdw_apcacc_84.12_apcf1_67.38_atef1_73.15.zip.*' -d unzipped_files
+    - name: Unzip Multi-part Zip Files
+      run: |
+        set -e
+        cd checkpoints
+        for file in *.zip.001; do
+          zipname=$(echo $file | sed 's/.001$//')
+          unzip -FF "$zipname".zip.001
+        done
