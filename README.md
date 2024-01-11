@@ -31,7 +31,7 @@ Make sure you have a domain, and you have registered Google reCAPTCHA for your d
 ```bash
 wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/main/scripts/install.sh && chmod +x install.sh && ./install.sh
 ```
-<small><em>* if you failed to pip install -r requirements.txt in the install.sh, you may need to do it manually.</em><small>
+<small><em>* if you failed to `pip install -r requirements.txt` in the install.sh, you may need to do it manually.</em><small>
 
 **3.** `cd Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba-main` folder, run `python3 app.py`.
 
@@ -45,7 +45,7 @@ wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analys
 **3.** Open the main folder as a PyCharm project, run the `app.py` to start your journey. The server runs on 80 port, you can change as you want in the `app.py`.
 
 # 3.  Models
-The repo only provided the best performance models for Fast-LCF-ATEPC, LCF-ATEPC and BERT-baseline-uncased. If you want all the models trained, due to the size of all the models are too large, I put them into TeraBox, you can download [here](https://terabox.com/s/1NxBufViyj6UzeCBeKQqSwg). After you finish downloading, put all the folders into `checkpoints/` folder.
+The repo only provided the best performance models for Fast-LCF-ATEPC, LCF-ATEPC and BERT-baseline-uncased. If you want all the trained models, due to the size of all the models are too large, I put them on TeraBox, you can download [here](https://terabox.com/s/1NxBufViyj6UzeCBeKQqSwg). After you finish downloading, put all the folders into `checkpoints/` folder.
 
 # 4. Dataset
 The [Alibaba Reviews Dataset](https://github.com/Koukotsukan/Alibaba_Reviews_Dataset) is also open-sourced under MIT license. You can use it for any ABSA or NLP tasks.
@@ -95,19 +95,19 @@ Thank you for choosing to use this open-source project! We have adopted the MIT 
 By adhering to these principles, you have the opportunity to collaborate with other developers and contribute to the growth of the open-source community. We appreciate your support and respect for the MIT License and hope you enjoy using this project!
 
 **Open-source Software Used (with their respective licenses):**
-* **Flask (BSD License)**: A lightweight WSGI web application framework.
-* **Celery (BSD License)**: An asynchronous task queue/job queue based on distributed message passing.
-* **PyABSA (MIT License) by Yang Heng**: An efficient and user-friendly implementation for aspect-based sentiment analysis.
-* **Flask-CORS (MIT License)**: A Flask extension for handling Cross-Origin Resource Sharing (CORS). I used it during debugging mode, did not use it in the production.
-* **Transformer Models (Apache License 2.0)**: The core library for Transformer-based models like BERT and DeBERTa.
-* **BERT (Apache License 2.0)**: Bidirectional Encoder Representations from Transformers for natural language processing tasks.
-* **DeBERTa (MIT License)**: Decoding-enhanced BERT with disentangled attention.
-* **Metric Visualizer (MIT License) by Yang Heng**: A tool for visualizing metrics.
+- [**Flask (BSD License)**](https://github.com/pallets/flask): A lightweight WSGI web application framework.
+- [**Celery (BSD License)**](https://github.com/celery/celery): An asynchronous task queue/job queue based on distributed message passing.
+- [**PyABSA (MIT License) by Yang Heng**](https://github.com/yangheng95/PyABSA): An efficient and user-friendly implementation for aspect-based sentiment analysis.
+- [**Flask-CORS (MIT License)**](https://github.com/corydolphin/flask-cors): A Flask extension for handling Cross-Origin Resource Sharing (CORS). I used it during debugging mode, did not use it in the production.
+- [**Transformer Models (Apache License 2.0)**](https://github.com/huggingface/transformers): The core library for Transformer-based models like BERT and DeBERTa.
+- [**BERT (Apache License 2.0)**](https://github.com/google-research/bert): Bidirectional Encoder Representations from Transformers for natural language processing tasks.
+- [**DeBERTa (MIT License)**](https://github.com/microsoft/DeBERTa): Decoding-enhanced BERT with disentangled attention.
+- [**Metric Visualizer (MIT License) by Yang Heng**](https://github.com/yangheng95/metric_visualizer): A tool for visualizing metrics.
 
 **Commercial Software Used (under license):**
-* **Google reCAPTCHA V3**: A CAPTCHA system that helps to distinguish human users from automated users.
-* **FontAwesome**: An icon set and toolkit for web applications.
-* **Google Sheets**: A web-based spreadsheet program.
+- [**Google reCAPTCHA V3**](https://www.google.com/recaptcha): A CAPTCHA system that helps to distinguish human users from automated users.
+- [**FontAwesome**](https://fontawesome.com/): An icon set and toolkit for web applications.
+- [**Google Sheets**](https://www.google.com/sheets): A web-based spreadsheet program.
 
 <hr>
 
