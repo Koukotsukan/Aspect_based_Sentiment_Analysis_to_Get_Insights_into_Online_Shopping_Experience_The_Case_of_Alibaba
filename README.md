@@ -83,19 +83,24 @@ Overall, users have a mixed experience on Alibaba. While they appreciate aspects
 
 # 6. Acknowledgement
 **Open-source Software Used (with their respective licenses):**
-- [**Flask (BSD License)**](https://github.com/pallets/flask): A lightweight WSGI web application framework.
-- [**Celery (BSD License)**](https://github.com/celery/celery): An asynchronous task queue/job queue based on distributed message passing.
-- [**PyABSA (MIT License) by Yang Heng**](https://github.com/yangheng95/PyABSA): An efficient and user-friendly implementation for aspect-based sentiment analysis.
-- [**Flask-CORS (MIT License)**](https://github.com/corydolphin/flask-cors): A Flask extension for handling Cross-Origin Resource Sharing (CORS). I used it during debugging mode, did not use it in the production.
-- [**Transformer Models (Apache License 2.0)**](https://github.com/huggingface/transformers): The core library for Transformer-based models like BERT and DeBERTa.
 - [**BERT (Apache License 2.0)**](https://github.com/google-research/bert): Bidirectional Encoder Representations from Transformers for natural language processing tasks.
+- [**Celery (BSD License)**](https://github.com/celery/celery): An asynchronous task queue/job queue based on distributed message passing.
 - [**DeBERTa (MIT License)**](https://github.com/microsoft/DeBERTa): Decoding-enhanced BERT with disentangled attention.
+- [**Flask (BSD License)**](https://github.com/pallets/flask): A lightweight WSGI web application framework.
+- [**Flask-CORS (MIT License)**](https://github.com/corydolphin/flask-cors): A Flask extension for handling Cross-Origin Resource Sharing (CORS). Used during debugging mode, not in the production.
 - [**Metric Visualizer (MIT License) by Yang Heng**](https://github.com/yangheng95/metric_visualizer): A tool for visualizing metrics.
+- [**Pandas (BSD License)**](https://github.com/pandas-dev/pandas): A library providing high-performance, easy-to-use data structures and data analysis tools.
+- [**PyABSA (MIT License) by Yang Heng**](https://github.com/yangheng95/PyABSA): An efficient and user-friendly implementation for aspect-based sentiment analysis.
+- [**Redis (BSD License)**](https://github.com/redis/redis): An in-memory data structure store, used as a database, cache, and message broker.
+- [**Transformer Models (Apache License 2.0)**](https://github.com/huggingface/transformers): The core library for Transformer-based models like BERT and DeBERTa.
 
 **Commercial Software Used (under license):**
-- [**Google reCAPTCHA V3**](https://www.google.com/recaptcha): A CAPTCHA system that helps to distinguish human users from automated users.
+- [**Cloudflare**](https://www.cloudflare.com/): A web infrastructure and website security company providing content delivery network and DDoS mitigation services.
+- [**Digital Ocean**](https://www.digitalocean.com/): A cloud infrastructure provider offering cloud services to help deploy modern apps.
 - [**FontAwesome**](https://fontawesome.com/): An icon set and toolkit for web applications.
+- [**Google reCAPTCHA V3**](https://www.google.com/recaptcha): A CAPTCHA system that helps to distinguish human users from automated users.
 - [**Google Sheets**](https://www.google.com/sheets): A web-based spreadsheet program.
+
 
 # License
 Thank you for choosing to use this open-source project! We have adopted the MIT License, which means you are free to use, modify, and distribute this project, as long as you follow these principles:
