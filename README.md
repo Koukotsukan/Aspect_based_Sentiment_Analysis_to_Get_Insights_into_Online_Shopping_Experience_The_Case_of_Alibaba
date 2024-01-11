@@ -82,18 +82,6 @@ Overall, users have a mixed experience on Alibaba. While they appreciate aspects
 
 
 # 6. Acknowledgement
-Thank you for choosing to use this open-source project! We have adopted the MIT License, which means you are free to use, modify, and distribute this project, as long as you follow these principles:
-
-**1.** **Retain the Copyright Notice**: Please retain the copyright notice and the text of the MIT License in your project to ensure proper attribution and licensing.
-
-**2.** **No Warranty Provided**: Understand that this project is provided "as is" without any express or implied warranties or guarantees. Your use of this project is at your own risk.
-
-**3.** **Respect the Contributors**: If you modify this project or create new work based on it, please respect the original contributors' work and acknowledge the source and contributors in your project.
-
-**4.** **Open Source Spirit**: If you use a portion of this project in your own work, we encourage you to embrace the spirit of open source by sharing your project with the community as open source as well.
-
-By adhering to these principles, you have the opportunity to collaborate with other developers and contribute to the growth of the open-source community. We appreciate your support and respect for the MIT License and hope you enjoy using this project!
-
 **Open-source Software Used (with their respective licenses):**
 - [**Flask (BSD License)**](https://github.com/pallets/flask): A lightweight WSGI web application framework.
 - [**Celery (BSD License)**](https://github.com/celery/celery): An asynchronous task queue/job queue based on distributed message passing.
@@ -108,6 +96,19 @@ By adhering to these principles, you have the opportunity to collaborate with ot
 - [**Google reCAPTCHA V3**](https://www.google.com/recaptcha): A CAPTCHA system that helps to distinguish human users from automated users.
 - [**FontAwesome**](https://fontawesome.com/): An icon set and toolkit for web applications.
 - [**Google Sheets**](https://www.google.com/sheets): A web-based spreadsheet program.
+
+# License
+Thank you for choosing to use this open-source project! We have adopted the MIT License, which means you are free to use, modify, and distribute this project, as long as you follow these principles:
+
+**1.** **Retain the Copyright Notice**: Please retain the copyright notice and the text of the MIT License in your project to ensure proper attribution and licensing.
+
+**2.** **No Warranty Provided**: Understand that this project is provided "as is" without any express or implied warranties or guarantees. Your use of this project is at your own risk.
+
+**3.** **Respect the Contributors**: If you modify this project or create new work based on it, please respect the original contributors' work and acknowledge the source and contributors in your project.
+
+**4.** **Open Source Spirit**: If you use a portion of this project in your own work, we encourage you to embrace the spirit of open source by sharing your project with the community as open source as well.
+
+By adhering to these principles, you have the opportunity to collaborate with other developers and contribute to the growth of the open-source community. We appreciate your support and respect for the MIT License and hope you enjoy using this project!
 
 <hr>
 
