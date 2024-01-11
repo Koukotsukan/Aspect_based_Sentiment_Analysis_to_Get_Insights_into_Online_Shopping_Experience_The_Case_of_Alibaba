@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, send_from_directory, g
+from flask import Flask, request, jsonify, render_template, send_from_directory, g, Response, render_template_string
 from pyabsa import AspectTermExtraction as ATEPC
 from flask_cors import CORS
 import requests
@@ -10,6 +10,7 @@ import uuid
 import json
 import unicodedata
 import magic
+from functools import wraps
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -44,6 +45,49 @@ def database():
 def robots_txt():
     return send_from_directory(app.static_folder, 'robots.txt')
 
+
+## THIS PART IS USED FOR DEMO SCENERIO, IF YOUR PUBLIC NETWORK CANNOT PASS RECAPTCHA V3'S 0.5 SCORE, YOU CAN CHANGE THE threshold TO PASS THE CAPTCHA.
+## THIS ONE IS JUST IN CASE ABVOE STUTAIONS, IF YOU DONT HAVE SIMILAR CONCERN, CAN DELETE THIS PART.
+# simple template
+# threshold_page = '''
+#     <form method="post">
+#         New Threshold: <input type="number" name="new_threshold" value="{{threshold}}" min="0" max="1" step="0.1"><br>
+#         <input type="submit" value="Update">
+#     </form>
+#     This page is designed for VIVA Demo only, because I don't know if our school network(public network) can pass the reCAPTCHA 0.5 score.
+#     Later on this page will be removed.
+# '''
+
+# # uname and pwd
+# USERNAME = 'Your Uname'
+# PASSWORD = 'Your Pwd'
+
+# def check_auth(username, password):
+#     return username == USERNAME and password == PASSWORD
+    
+# def authenticate():
+#     return Response(
+#     'Could not verify your access level for that URL.\n'
+#     'You have to login with proper credentials', 401,
+#     {'WWW-Authenticate': 'Basic realm="Login Required"'})
+    
+# def requires_auth(f):
+#     @wraps(f)
+#     def decorated(*args, **kwargs):
+#         auth = request.authorization
+#         if not auth or not check_auth(auth.username, auth.password):
+#             return authenticate()
+#         return f(*args, **kwargs)
+#     return decorated
+
+# @app.route('/emergency', methods=['GET', 'POST'])
+# @requires_auth
+# def change_threshold():
+#     global threshold
+#     if request.method == 'POST':
+#         threshold = request.form['new_threshold']
+#         return f"Threshold updated to {threshold}"
+#     return render_template_string(threshold_page, threshold=threshold)
 
 def allowed_file(filename):
     ALLOWED_EXTENSIONS = {'txt', 'csv'}
