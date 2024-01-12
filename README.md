@@ -1,9 +1,9 @@
 # Aspect based Sentiment Analysis to Get Insights into Online Shopping Experience: The Case of Alibaba
-The study employed the Fast-LCF-ATEPC model for Alibaba reviews, achieving 91.06% APC accuracy and 83.09% ATE F1 score. It revealed mixed user experiences in areas like usability, pricing, and shipping, aiming to enhance Alibaba's e-commerce user satisfaction.
+The study employed the Fast-LCF-ATEPC model for Alibaba reviews Aspect-based Sentiment Analysis, achieving 91.06% APC accuracy and 83.09% ATE F1 score. It revealed mixed user experiences in areas like usability, pricing, and shipping, aiming to enhance Alibaba's e-commerce user satisfaction.
 
 By using PyABSA, Flask, and Javascript, we have successfully finished this project, and it is now online https://aliexperience.online.
 
-The full report can be found (here)[not_published_yet].
+The full report can be found [here](NOT_PUBLISHED_YET).
 
 *Home Page*
 
@@ -37,7 +37,7 @@ The full report can be found (here)[not_published_yet].
 ```bash
 wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/main/scripts/install.sh && chmod +x install.sh && ./install.sh
 ```
-<small><em>* if you failed to `pip install -r requirements.txt` in the install.sh, you may need to do it manually.</em><small>
+<small>*if you failed to `pip install -r requirements.txt` in the install.sh, you may need to do it manually.*<small>
 
 **3.** `cd Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba-main` folder, run `python3 app.py`.
 
@@ -48,13 +48,15 @@ wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analys
 ## Windows / Unix / Mac OS Users:
 **1.** Download the source code either by using git clone or directly downloading.
 
-**2.** Install [7zip](https://www.7-zip.org/), `cd` the main folder and then, `cd checkpoints/`, then you need to unzip all the zip files. After you get the 3 folders, delete the zip files.
+**2.** Install [7zip](https://www.7-zip.org/) (MUST USE 7zip), `cd` the main folder and then, `cd checkpoints/`, then you need to unzip all the zip files. After you get the 3 folders, delete the zip files.
 
 **3.** Manually change the reCAPTCHA v3 keys in `static/js/index.js` and secrets in `app.py`
 
 **4.** Open the main folder as a PyCharm project, run `pip install -r requirements.txt`, and then run the `app.py` to start your journey. The server runs on 80 port, you can change as you want in the `app.py`.
 
 # 3.  Models
+<img alt="Checkpoints_All" style="height:330px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/1fa9c6c7-8874-4f83-a4d7-dec046a1fbe6"/>
+
 The repo only provided the best performance models for Fast-LCF-ATEPC, LCF-ATEPC and BERT-baseline-uncased. If you want all the trained models, due to the size of all the models are too large, I put them on TeraBox, you can download [here](https://terabox.com/s/1NxBufViyj6UzeCBeKQqSwg). After you finish downloading, put all the folders into `checkpoints/` folder.
 
 # 4. Dataset
@@ -62,31 +64,31 @@ The [Alibaba Reviews Dataset](https://github.com/Koukotsukan/Alibaba_Reviews_Dat
 
 # 5. Some Findings
 
-### **Comprehensive Report: User Experience on Alibaba**
+## **Comprehensive Report: User Experience on Alibaba**
 
 Based on the provided data, this report aims to provide a comprehensive analysis of user experience on Alibaba, considering various aspects regardless of sentiment.
 
-**App Experience**
+### App Experience
 
 The Alibaba app is a significant aspect of user experience, with both positive (170 mentions) and negative (91 mentions) sentiments expressed. Users appreciate the app's ease of use and comprehensive features. However, some users encountered issues with performance, interface, or functionality. This suggests that while the app provides a generally positive experience, there are areas for improvement to enhance user satisfaction.
 
-**Alibaba Platform**
+### Alibaba Platform
 
 Users generally have a positive view of Alibaba (167 positive mentions), indicating trust in the brand and satisfaction with the services and products offered. However, some users expressed negative sentiments (67 mentions), possibly relating to certain policies, services, or features. This indicates that while Alibaba as a platform is well-received, attention should be given to addressing the concerns raised by users.
 
-**Pricing**
+### Pricing
 
 While many users are satisfied with the pricing on Alibaba (87 positive mentions), some users found the prices of some products to be high (47 negative mentions). This suggests that while Alibaba's pricing strategy is generally appreciated, it could be beneficial to review the pricing of certain products to ensure competitiveness.
 
-**Shipping and Delivery**
+### Shipping and Delivery 
 
 Users appreciate Alibaba's delivery service, including the speed of delivery, quality of packaging, and communication during the delivery process (70 positive mentions). However, users also expressed dissatisfaction with shipping, including speed, cost, or communication during the shipping process (81 negative mentions). This indicates a need for Alibaba to enhance its shipping and delivery services to improve user satisfaction.
 
-**Service and Communication**
+### Service and Communication
 
 Users commend the services provided by Alibaba, which could range from customer service to after-sales service (152 positive mentions). However, some users had issues with services such as customer service and supplier communication (19 negative mentions for customer service). This suggests that while Alibaba's services are generally appreciated, there is room for improvement in communication and service delivery.
 
-**Conclusion**
+### Conclusion
 
 Overall, users have a mixed experience on Alibaba. While they appreciate aspects like the app, Alibaba platform, and pricing, they also express concerns about app functionality, shipping services, and communication. By addressing these concerns, Alibaba can further enhance user satisfaction and strengthen its position as a leading e-commerce platform.
 
