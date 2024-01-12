@@ -3,6 +3,8 @@ The study employed the Fast-LCF-ATEPC model for Alibaba reviews, achieving 91.06
 
 By using PyABSA, Flask, and Javascript, we have successfully finished this project, and it is now online https://aliexperience.online.
 
+The full report can be found (here)[not_published_yet].
+
 *Home Page*
 
 <img alt="Ali-Experience Homepage" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/Alibaba%20Experience%20Reviews%20Homepage.png"/>
@@ -25,7 +27,7 @@ By using PyABSA, Flask, and Javascript, we have successfully finished this proje
 
 * Make sure you have 30GB+ free disk.
 
-* （opt) If you have GPU resources, the predciction will be acccelaraing,
+* （opt) If you have GPU resources, the predciction will be accelerated,
 
 # 2. Installation
 ## Linux Users:
@@ -41,7 +43,7 @@ wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analys
 
 **4.** Now your server is running on 80 port.
 
-**NOTICE**: If you skipped inputting your Google reCAPTCHA V3 sitekey and secret, you can use ./install.sh -r to refill the keys. But if you want to change the keys, you may need to do it manually. The site keys are in `static/js/index.js` and secrets are in `app.py`.
+**NOTICE**: If you skipped inputting your Google reCAPTCHA V3 sitekey and secret, you can use command `cd .. & ./install.sh -r` to refill the keys. But if you want to change the keys, you may need to do it manually. The site keys are in `static/js/index.js` and secrets are in `app.py`.
 
 ## Windows / Unix / Mac OS Users:
 **1.** Download the source code either by using git clone or directly downloading.
