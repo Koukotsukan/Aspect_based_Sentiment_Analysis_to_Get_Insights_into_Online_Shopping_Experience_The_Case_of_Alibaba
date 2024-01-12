@@ -1,4 +1,6 @@
 # Aspect based Sentiment Analysis to Get Insights into Online Shopping Experience: The Case of Alibaba
+<a href="https://aliexperience.online" target="_blank"><img alt="Logo" style="width:100px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/906a0837-429f-482f-ab9a-c101149161c9"/></a>
+
 The study employed the Fast-LCF-ATEPC model for Alibaba reviews Aspect-based Sentiment Analysis, achieving 91.06% APC accuracy and 83.09% ATE F1 score. It revealed mixed user experiences in areas like usability, pricing, and shipping, aiming to enhance Alibaba's e-commerce user satisfaction.
 
 By using PyABSA, Flask, and Javascript, we have successfully finished this project, and it is now online https://aliexperience.online.
@@ -54,15 +56,23 @@ wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analys
 
 **4.** Open the main folder as a PyCharm project, run `pip install -r requirements.txt`, and then run the `app.py` to start your journey. The server runs on 80 port, you can change as you want in the `app.py`.
 
-# 3.  Models
+# 3. Dataset
+<img alt="Ali-Experience Homepage" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/c40766f9-3c7f-4b39-b299-ac90bc8b86dc"/>
+
+The [Alibaba Reviews Dataset](https://github.com/Koukotsukan/Alibaba_Reviews_Dataset) is also open-sourced under MIT license. You can use it for any ABSA or NLP tasks.
+
+# 4.  Models
 <img alt="Checkpoints_All" style="height:330px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/1fa9c6c7-8874-4f83-a4d7-dec046a1fbe6"/>
 
 The repo only provided the best performance models for Fast-LCF-ATEPC, LCF-ATEPC and BERT-baseline-uncased. If you want all the trained models, due to the size of all the models are too large, I put them on TeraBox, you can download [here](https://terabox.com/s/1NxBufViyj6UzeCBeKQqSwg). After you finish downloading, put all the folders into `checkpoints/` folder.
 
-# 4. Dataset
-The [Alibaba Reviews Dataset](https://github.com/Koukotsukan/Alibaba_Reviews_Dataset) is also open-sourced under MIT license. You can use it for any ABSA or NLP tasks.
-
 # 5. Some Findings
+<img alt="wordcloud" style="width:330px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/8ae5e57b-658e-432e-b4f6-73dd8f4beba3"/>
+<img alt="top_20_P" style="width:330px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/a4a15048-23a7-4384-ab5f-81817f95f2ce"/>
+<img alt="top_20_N" style="width:330px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/9b43ecc6-d0b0-4b14-8af4-9a8f7c22bce6"/>
+<img alt="top_20_n" style="width:330px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/7ac52145-94ef-4c73-870b-8b4f49e25eb0"/>
+<img alt="top_5_each_sentiment" style="height:330px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/05d53bc9-df8b-4793-99d9-ab812b321e46"/>
+<img alt="piechart" style="width:230px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/11a48a08-53d8-49fd-a30b-9e657255f347"/>
 
 ## **Comprehensive Report: User Experience on Alibaba**
 
