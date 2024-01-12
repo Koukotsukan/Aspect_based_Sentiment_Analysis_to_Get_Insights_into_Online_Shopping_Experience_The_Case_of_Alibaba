@@ -1,5 +1,9 @@
 # Aspect based Sentiment Analysis to Get Insights into Online Shopping Experience: The Case of Alibaba
-<a href="https://aliexperience.online" target="_blank"><img alt="Logo" style="width:100px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/906a0837-429f-482f-ab9a-c101149161c9"/></a>
+[![dependency - Python](https://img.shields.io/badge/dependency-Python-blue)](https://pypi.org/project/Python)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license) [![issues - Alibaba_Reviews_Dataset](https://img.shields.io/github/issues/Koukotsukan/Alibaba_Reviews_Dataset)](https://github.com/Koukotsukan/Alibaba_Reviews_Dataset/issues)
+<img src="https://img.shields.io/badge/APC_Acc-91.06%25-2ea44f?logo=codeforces" alt="APC Acc - 91.06%">
+<img src="https://img.shields.io/badge/ATE_F1-83.09%25-2ea44f?logo=codeforces" alt="ATE F1 Score - 83.09%">
+<a href="https://aliexperience.online" target="_blank"><img alt="Logo" style="width:65px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/906a0837-429f-482f-ab9a-c101149161c9"/></a>
 
 The study employed the Fast-LCF-ATEPC model for Alibaba reviews Aspect-based Sentiment Analysis, achieving 91.06% APC accuracy and 83.09% ATE F1 score. It revealed mixed user experiences in areas like usability, pricing, and shipping, aiming to enhance Alibaba's e-commerce user satisfaction.
 
