@@ -7,6 +7,9 @@ By using PyABSA, Flask, and Javascript, we have successfully finished this proje
 
 The full report can be found [here](NOT_PUBLISHED_YET).
 
+**NOTICE:** In this project, in all context, *Alibaba* refers to the *Alibaba Intertational B2B Online Platform*.
+<hr>
+
 *Home Page*
 
 <img alt="Ali-Experience Homepage" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/Alibaba%20Experience%20Reviews%20Homepage.png"/>
