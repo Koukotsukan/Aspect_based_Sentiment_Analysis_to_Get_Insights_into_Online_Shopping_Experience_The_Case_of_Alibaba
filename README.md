@@ -41,12 +41,16 @@ wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analys
 
 **4.** Now your server is running on 80 port.
 
+**NOTICE**: If you skipped inputting your Google reCAPTCHA V3 sitekey and secret, you can use ./install.sh -r to refill the keys. But if you want to change the keys, you may need to do it manually. The site keys are in `static/js/index.js` and secrets are in `app.py`.
+
 ## Windows / Unix / Mac OS Users:
 **1.** Download the source code either by using git clone or directly downloading.
 
 **2.** Install [7zip](https://www.7-zip.org/), `cd` the main folder and then, `cd checkpoints/`, then you need to unzip all the zip files. After you get the 3 folders, delete the zip files.
 
-**3.** Open the main folder as a PyCharm project, `pip install -r requirements.txt`, and then run the `app.py` to start your journey. The server runs on 80 port, you can change as you want in the `app.py`.
+**3.** Manually change the reCAPTCHA v3 keys in `static/js/index.js` and secrets in `app.py`
+
+**4.** Open the main folder as a PyCharm project, run `pip install -r requirements.txt`, and then run the `app.py` to start your journey. The server runs on 80 port, you can change as you want in the `app.py`.
 
 # 3.  Models
 The repo only provided the best performance models for Fast-LCF-ATEPC, LCF-ATEPC and BERT-baseline-uncased. If you want all the trained models, due to the size of all the models are too large, I put them on TeraBox, you can download [here](https://terabox.com/s/1NxBufViyj6UzeCBeKQqSwg). After you finish downloading, put all the folders into `checkpoints/` folder.
