@@ -21,7 +21,11 @@ By using PyABSA, Flask, and Javascript, we have successfully finished this proje
 
 
 # 1. Before Installation
-Make sure you have a domain, and you have registered Google reCAPTCHA for your domain. So you can obtain your reCAPTCHA sitekey and secret.
+* Make sure you have a domain, and you have registered Google reCAPTCHA for your domain. So you can obtain your reCAPTCHA sitekey and secret.
+
+* Make sure you have 30GB+ free disk.
+
+* （opt) If you have GPU resources, the predciction will be acccelaraing,
 
 # 2. Installation
 ## Linux Users:
