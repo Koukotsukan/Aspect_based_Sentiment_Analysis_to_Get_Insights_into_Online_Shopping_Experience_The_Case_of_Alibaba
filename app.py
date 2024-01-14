@@ -11,6 +11,12 @@ import json
 import unicodedata
 import magic
 from functools import wraps
+from collections import Counter, defaultdict
+from io import BytesIO
+import matplotlib.pyplot as plt
+import base64
+from wordcloud import WordCloud
+import numpy as np
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -24,6 +30,7 @@ celery.conf.update(app.config)
 
 RESULTS_DIR = 'results'
 os.makedirs(RESULTS_DIR, exist_ok=True)
+threshold = 0.5
 
 @app.route('/')
 def home():
@@ -46,9 +53,7 @@ def robots_txt():
     return send_from_directory(app.static_folder, 'robots.txt')
 
 
-## THIS PART IS USED FOR DEMO SCENERIO, IF YOUR PUBLIC NETWORK CANNOT PASS RECAPTCHA V3'S 0.5 SCORE, YOU CAN CHANGE THE threshold TO PASS THE CAPTCHA.
-## THIS ONE IS JUST IN CASE ABVOE STUTAIONS, IF YOU DONT HAVE SIMILAR CONCERN, CAN DELETE THIS PART.
-# simple template
+# 简单的HTML模板
 # threshold_page = '''
 #     <form method="post">
 #         New Threshold: <input type="number" name="new_threshold" value="{{threshold}}" min="0" max="1" step="0.1"><br>
@@ -56,21 +61,24 @@ def robots_txt():
 #     </form>
 #     This page is designed for VIVA Demo only, because I don't know if our school network(public network) can pass the reCAPTCHA 0.5 score.
 #     Later on this page will be removed.
+#
 # '''
 
-# # uname and pwd
-# USERNAME = 'Your Uname'
-# PASSWORD = 'Your Pwd'
-
+# # 用户名和密码
+# USERNAME = 'NiuzhaohangS2001904..'
+# PASSWORD = 'Niubiniubi123..'
+#
+# # 用于验证用户名和密码的装饰器
 # def check_auth(username, password):
 #     return username == USERNAME and password == PASSWORD
-    
+#
 # def authenticate():
+#     """发送401响应，提示用户认证"""
 #     return Response(
 #     'Could not verify your access level for that URL.\n'
 #     'You have to login with proper credentials', 401,
 #     {'WWW-Authenticate': 'Basic realm="Login Required"'})
-    
+#
 # def requires_auth(f):
 #     @wraps(f)
 #     def decorated(*args, **kwargs):
@@ -79,8 +87,8 @@ def robots_txt():
 #             return authenticate()
 #         return f(*args, **kwargs)
 #     return decorated
-
-# @app.route('/emergency', methods=['GET', 'POST'])
+#
+# @app.route('/rWlNzH', methods=['GET', 'POST'])
 # @requires_auth
 # def change_threshold():
 #     global threshold
@@ -88,6 +96,12 @@ def robots_txt():
 #         threshold = request.form['new_threshold']
 #         return f"Threshold updated to {threshold}"
 #     return render_template_string(threshold_page, threshold=threshold)
+
+@app.route('/secure/name-protection')
+def name_protection():
+    visitor_ip = request.headers.get('CF-Connecting-IP')
+    ray_id = uuid.uuid4()
+    return render_template('secure/name-protection.html', visitor_ip=visitor_ip, ray_id=ray_id)
 
 def allowed_file(filename):
     ALLOWED_EXTENSIONS = {'txt', 'csv'}
@@ -136,12 +150,85 @@ def is_punctuation_or_non_english(token):
     # 检查 token 是否是标点符号或非英文字符
     return any(unicodedata.category(char).startswith('P') for char in token) or not token.isascii()
 
+def parse_data(json_data):
+    sentiment_counts = Counter()
+    aspect_sentiment_counts = defaultdict(Counter)
+
+    for entry in json_data:
+        aspects = entry.get('aspect', [])
+        sentiments = entry.get('sentiment', [])
+        positions = entry.get('position', [])
+        for aspect, sentiment, pos in zip(aspects, sentiments, positions):
+            if pos and len(entry['tokens']) > pos[0]:
+                sentiment_counts[sentiment] += 1
+                aspect_sentiment_counts[aspect][sentiment] += 1
+    positive_aspects = {aspect: count.get('Positive', 0) for aspect, count in aspect_sentiment_counts.items()}
+    negative_aspects = {aspect: count.get('Negative', 0) for aspect, count in aspect_sentiment_counts.items()}
+    all_aspects = []
+    for item in json_data:
+        aspects = item.get("aspect", []) 
+        all_aspects.extend(aspects)
+    return sentiment_counts, positive_aspects, negative_aspects, all_aspects
+
+def generate_aspect_wordcloud(aspects):
+    aspect_counts = Counter(aspects)
+    wordcloud = WordCloud(width=700, height=300, background_color='rgba(255, 255, 255, 0)').generate_from_frequencies(aspect_counts)
+    buffer = BytesIO()
+    wordcloud.to_image().save(buffer, format='PNG')
+    base64_image = base64.b64encode(buffer.getvalue()).decode('utf-8')
+    return base64_image
+
+def encode_image_base64(fig):
+    buf = BytesIO()
+    fig.savefig(buf, format='png')
+    buf.seek(0)
+    image_base64 = base64.b64encode(buf.read()).decode('utf-8')
+    buf.close()
+    return image_base64
+
+def create_sentiment_pie_chart(sentiments, figsize=(3,3)):
+    labels = sentiments.keys()
+    sizes = sentiments.values()
+
+    fig, ax = plt.subplots()
+    explode = (0.1, 0, 0)
+    ax.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', startangle=90, shadow=True)
+    ax.axis('equal')
+    fig.patch.set_alpha(0)
+
+    return encode_image_base64(fig)
+
+def create_aspect_histogram(aspects_counter, title, color):
+    if not aspects_counter:
+        fig, ax = plt.subplots()
+        ax.text(0.5, 0.5, 'Not Enough Data Available', horizontalalignment='center', verticalalignment='center', transform=ax.transAxes, fontsize=10)
+        ax.axis('off')
+        fig.patch.set_alpha(0)
+        return encode_image_base64(fig)
+
+    aspects = aspects_counter.most_common(20)
+    labels, values = zip(*aspects) if aspects else ([], [])
+    fig = plt.figure(figsize=(6, 4))
+    plt.barh(labels, values, color=color)
+    plt.xlabel('Counts', fontsize=10)
+    plt.title(title, fontsize=10)
+    plt.xticks(fontsize=7)
+    plt.yticks(fontsize=7)
+    fig.patch.set_alpha(0)  # 设置图表背景透明
+    return encode_image_base64(fig)
+
 @app.route('/show-result/<filename>')
 def show_result(filename):
     result_file_path = os.path.join(RESULTS_DIR, filename)
     try:
         with open(result_file_path, 'r') as file:
             results_data = json.load(file)  # 加载 JSON 数据
+
+        sentiment_counts, positive_aspects, negative_aspects, all_aspects = parse_data(results_data)
+        pie_chart_base64 = create_sentiment_pie_chart(sentiment_counts, figsize=(3,3))
+        positive_histogram_base64 = create_aspect_histogram(Counter(positive_aspects), 'Top 20 Positive Aspects', 'green')
+        negative_histogram_base64 = create_aspect_histogram(Counter(negative_aspects), 'Top 20 Negative Aspects', 'red')
+        base64_wordcloud = generate_aspect_wordcloud(all_aspects)
 
         # 处理 JSON 数据以匹配 HTML 模板的需求
         processed_results = []
@@ -168,7 +255,11 @@ def show_result(filename):
             joined_sentence = ''.join(modified_sentence)
             processed_results.append({'sentence': joined_sentence})
 
-        return render_template('result_page.html', results=processed_results)
+        return render_template('result_page.html', results=processed_results, pie_chart=pie_chart_base64,
+                               positive_histogram=positive_histogram_base64,
+                               negative_histogram=negative_histogram_base64,
+                               wordcloud=base64_wordcloud
+                               )
     except IOError:
         return 'Result not found', 404
 
@@ -197,7 +288,7 @@ def upload_file():
     recaptcha_result = recaptcha_request.json()
 
     # 检查 reCAPTCHA 验证是否成功
-    if not recaptcha_result.get('success') or recaptcha_result.get('score') < 0.5:
+    if not recaptcha_result.get('success') or recaptcha_result.get('score') <= threshold:
         # 如果验证失败或得分低于阈值（例如 0.5）
         score = recaptcha_result.get('score', 0)  # 获取分数，如果不存在则默认为0
         return jsonify({'error': f'reCAPTCHA verification failed, score: {score}'}), 400
@@ -274,7 +365,7 @@ def predict():
     recaptcha_result = recaptcha_request.json()
 
     # 检查 reCAPTCHA 验证是否成功
-    if not recaptcha_result.get('success') or recaptcha_result.get('score') < 0.5:
+    if not recaptcha_result.get('success') or recaptcha_result.get('score') <= threshold:
         # 如果验证失败或得分低于阈值（例如 0.5）
         score = recaptcha_result.get('score', 0)  # 获取分数，如果不存在则默认为0
         return jsonify({'error': f'reCAPTCHA verification failed, score: {score}'}), 400
