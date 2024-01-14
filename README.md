@@ -24,7 +24,8 @@ The full report can be found [here](NOT_PUBLISHED_YET).
 
 *Batch Prediction*
 
-<img alt="Batch Prediction" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/blob/main/static/batch%20result.png"/>
+<img alt="Batch Prediction" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/2979326f-d240-4ae8-b11a-527eb592317d"/>
+
 
 *Error Handling*
 
