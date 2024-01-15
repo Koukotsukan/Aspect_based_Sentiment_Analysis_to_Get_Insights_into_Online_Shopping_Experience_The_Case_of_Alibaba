@@ -9,7 +9,7 @@ The study employed the Fast-LCF-ATEPC model for Alibaba reviews Aspect-based Sen
 
 By using PyABSA, Flask, and Javascript, we have successfully finished this project, and it is now online https://aliexperience.online.
 
-The full report can be found [here](NOT_PUBLISHED_YET).
+The full report can be found [here](https://note.ms/zsfq).
 
 **NOTICE:** In this project, in all context, *Alibaba* refers to the *Alibaba Intertational B2B Online Platform*.
 <hr>
@@ -47,11 +47,11 @@ The full report can be found [here](NOT_PUBLISHED_YET).
 ```bash
 wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/main/scripts/install.sh && chmod +x install.sh && ./install.sh
 ```
-<small>*if you failed to `pip install -r requirements.txt` in the install.sh, you may need to do it manually.*<small>
+**NOTICE**: If you failed to `pip install -r requirements.txt` during runing `install.sh`, you may need to do it manually. If still failed, create a [venv](https://docs.python.org/3/library/venv.html) first.
 
 **3.** `cd Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba-main` folder, run `python3 app.py`.
 
-**4.** Now your server is running on 80 port.
+**4.** Now your server is running on 80 port (You can decide to add SSL/TLS certificate, the tutorial is in the `app.py` comments.
 
 **NOTICE**: If you skipped inputting your Google reCAPTCHA V3 sitekey and secret, you can use command `cd .. & ./install.sh -r` to refill the keys. But if you want to change the keys, you may need to do it manually. The site keys are in `static/js/index.js` and secrets are in `app.py`.
 
