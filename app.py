@@ -421,3 +421,6 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=False)
+    # if you have SSL/TLS certificate, keep them outside of the flask folder, add SSL_context=(path/to/certificate.pem, path/to/secret.key) to above parameters
+    # and change port number to 443 (or stay at 80, although it could be weird). 
+    # If you use Cloudflare like me, you can be a CA to make your own certificate without a real CA. Set SSL/TLS mode in Cloudflare as "Full". E2E encryption will be applied all along the ways.
