@@ -49,9 +49,11 @@ wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analys
 ```
 **NOTICE**: If you failed to `pip install -r requirements.txt` during runing `install.sh`, you may need to do it manually. If still failed, create a [venv](https://docs.python.org/3/library/venv.html) first.
 
-**3.** `cd Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba-main` folder, run `python3 app.py`.
+**3.** Install redis-server `sudo apt get install redis-server` and start it `sudo systemctl start redis-server`.
 
-**4.** Now your server is running on 80 port (You can decide to add SSL/TLS certificate, the tutorial is in the `app.py` comments.
+**4.** `cd Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba-main` folder, run `python3 app.py`, then open another terminal, run `celery -A app.celery worker --loglevel=info`.
+
+**5.** Now your server is running on 80 port (You can decide to add SSL/TLS certificate, the tutorial is in the `app.py` comments.
 
 **NOTICE**: If you skipped inputting your Google reCAPTCHA V3 sitekey and secret, you can use command `cd .. & ./install.sh -r` to refill the keys. But if you want to change the keys, you may need to do it manually. The site keys are in `static/js/index.js` and secrets are in `app.py`.
 
@@ -62,7 +64,7 @@ wget https://raw.githubusercontent.com/Koukotsukan/Aspect_based_Sentiment_Analys
 
 **3.** Manually change the reCAPTCHA v3 keys in `static/js/index.js` and secrets in `app.py`
 
-**4.** Open the main folder as a PyCharm project, run `pip install -r requirements.txt`, and then run the `app.py` to start your journey. The server runs on 80 port, you can change as you want in the `app.py`.
+**4.** Open the main folder as a PyCharm project, run `pip install -r requirements.txt`, and then run the `app.py` and CMD `celery -A app.celery worker --loglevel=info` to start your journey. The server runs on 80 port, you can change as you want in the `app.py`.
 
 # 3. Dataset
 <img alt="Ali-Experience Homepage" style="width:450px;" src="https://github.com/Koukotsukan/Aspect_based_Sentiment_Analysis_to_Get_Insights_into_Online_Shopping_Experience_The_Case_of_Alibaba/assets/49346779/c40766f9-3c7f-4b39-b299-ac90bc8b86dc"/>
